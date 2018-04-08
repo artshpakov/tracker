@@ -5,4 +5,6 @@ Rails.application.routes.draw do
     post :auth
   end
 
+  resources :issues
+
 end

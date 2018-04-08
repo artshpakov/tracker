@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe AuthController, type: :controller do
-  let(:user_attributes) { {email: build(:user).email, password: "secret"} }
-  before { create(:user, :regular, user_attributes) }
+  let(:user_attributes) { {email: build(:regular).email, password: "secret"} }
+  before { create(:regular, user_attributes) }
 
   context 'POST #auth' do
     it "authenticates user with valid credentials" do
@@ -17,7 +17,7 @@ RSpec.describe AuthController, type: :controller do
   end
 
   context 'API token validation' do
-    let(:regular) { create :user, :regular }
+    let(:regular) { create :regular }
 
     it "is passed for an authenticated user" do
       @request.headers['X-Api-Key'] = regular.api_token

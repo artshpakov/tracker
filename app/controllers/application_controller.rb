@@ -13,4 +13,8 @@ class ApplicationController < ActionController::API
   def current_user
     @user
   end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    head :forbidden
+  end
 end

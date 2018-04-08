@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180408203142) do
+ActiveRecord::Schema.define(version: 20180408205355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "issues", force: :cascade do |t|
+    t.string   "title",                   null: false
+    t.text     "description"
+    t.integer  "status",      default: 1, null: false
+    t.integer  "reporter_id"
+    t.integer  "assignee_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["assignee_id"], name: "index_issues_on_assignee_id", using: :btree
+    t.index ["reporter_id"], name: "index_issues_on_reporter_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                                null: false

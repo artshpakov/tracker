@@ -10,7 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'pry-rails'
 gem 'sorcery'
-gem 'cancancan'
+gem 'cancancan', '2.1.0'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do

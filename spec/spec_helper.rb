@@ -15,6 +15,6 @@ RSpec.configure do |config|
   require_relative './factories.rb'
 end
 
-def create_manager
-  create :user, :manager
+def json_response
+  JSON.parse(response.body)
 end
