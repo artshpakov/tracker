@@ -9,6 +9,7 @@ gem 'rails', '~> 5.0.6'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'pry-rails'
+gem 'sorcery'
 
 gem 'jbuilder', '~> 2.5'
 
