@@ -1,24 +1,13 @@
-# README
+# API Reference
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Authenticate
 
-Things you may want to cover:
+```shell
+curl -XPOST 'HOST/auth' -d 'email=user@local.host&password=123456'
+```
 
-* Ruby version
+### Fetch current user account
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+curl 'HOST/me'
+```
