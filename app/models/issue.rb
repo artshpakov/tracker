@@ -4,6 +4,8 @@ class Issue < ApplicationRecord
 
   default_scope { order(created_at: :desc) }
 
+  max_paginates_per 25
+
   StatusPending = 1
   StatusInProgress = 2
   StatusResolved = 3

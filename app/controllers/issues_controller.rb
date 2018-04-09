@@ -4,7 +4,7 @@ class IssuesController < ApplicationController
   def index
     issues = current_user.issues
     issues = issues.where(status: params[:status]) if params[:status].present?
-    render json: issues
+    render json: issues.page(params[:page] || 1)
   end
 
   def create

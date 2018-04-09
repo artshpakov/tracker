@@ -12,6 +12,7 @@ gem 'pry-rails'
 gem 'sorcery'
 gem 'cancancan', '2.1.0'
 gem 'jbuilder', '~> 2.5'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platform: :mri
